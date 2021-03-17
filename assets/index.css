@@ -1,0 +1,7 @@
+/* Index Styles */
+#product-info {
+  -ms-grid-rows: minmax(max-content, auto) minmax(min-content, max-content);
+      grid-template-rows: minmax(-webkit-max-content, auto) minmax(-webkit-min-content, -webkit-max-content);
+      grid-template-rows: minmax(max-content, auto) minmax(min-content, max-content);
+}
+/*# sourceMappingURL=index.css.map */
