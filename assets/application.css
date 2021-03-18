@@ -1,5 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&display=swap");
 * {
-  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-family: "Rubik", Arial, Helvetica, sans-serif;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -15,6 +16,7 @@ body {
 
 body {
   background-color: #ffffff;
+  font-size: 15px;
 }
 
 h1,
@@ -23,9 +25,175 @@ h3,
 h4,
 h5,
 h6,
-p {
+p,
+ul,
+ol {
   margin: 0;
   padding: 0;
+  font-family: 400;
+  color: #000000;
+}
+
+.headline-big {
+  font-size: 22vw;
+  font-weight: 300;
+  line-height: 1;
+}
+
+h2 {
+  font-size: 30px;
+  line-height: 40px;
+}
+
+h3 {
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+p,
+ol,
+ul {
+  font-size: 15px;
+  line-height: 20px;
+  color: #555555;
+  font-weight: 300;
+}
+
+.list-with-stroke {
+  list-style-type: none;
+}
+
+.list-with-stroke li {
+  padding: 20px 0;
+  border-top: 1px solid #dedede;
+}
+
+.list-with-stroke li:last-child {
+  border-bottom: 1px solid #dedede;
+}
+
+.styled-select {
+  position: relative;
+}
+
+.styled-select .select-arrow {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  bottom: 2px;
+  width: 60px;
+  background-color: #ffffff;
+  text-align: center;
+  line-height: 60px;
+  border-left: 1px solid #000000;
+  pointer-events: none;
+}
+
+.styled-select .select-arrow img {
+  display: inline-block;
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
+}
+
+.styled-select select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  width: auto;
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+  text-align: left;
+  width: 100%;
+  font-size: 15px;
+  line-height: 20px;
+  padding: 20px;
+  border: 1px solid #000000;
+}
+
+button {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  width: auto;
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+  text-align: left;
+  width: 100%;
+  font-size: 15px;
+  line-height: 20px;
+  padding: 20px;
+  background-color: #ff3700;
+  color: #ffffff;
+}
+
+a {
+  color: #555555;
+  text-decoration: none;
+}
+
+.link-to-cart {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 40px;
+  color: #555555;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.link-to-cart .cart-item-count {
+  display: block;
+  font-size: 0;
+  width: 10px;
+  height: 10px;
+  background-color: #dedede;
+  border-radius: 50%;
+}
+
+.link-to-cart .cart-text {
+  margin-right: 10px;
+  opacity: 0;
+  -webkit-transition: opacity 400ms ease;
+  transition: opacity 400ms ease;
+  white-space: nowrap;
+}
+
+.link-to-cart:hover .cart-text {
+  opacity: 1;
+}
+
+.link-to-cart.cart-filled .cart-item-count {
+  width: 20px;
+  height: 20px;
+  background-color: #ff3700;
+  font-size: 12px;
+  color: #ffffff;
+  line-height: 20px;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
 }
 
 .grid {
@@ -42,7 +210,7 @@ p {
 .main-content {
   min-height: 100vh;
   padding: 40px;
-  width: 50%;
+  width: calc(50% + 20px);
   margin-left: auto;
 }
 
@@ -77,7 +245,7 @@ p {
   left: 0;
   top: 40px;
   bottom: 40px;
-  width: 50%;
+  width: calc(50% - 20px);
 }
 
 .sticky-side-image img {
@@ -94,12 +262,38 @@ p {
       grid-template-rows: minmax(max-content, auto) minmax(min-content, max-content);
 }
 
+#product-info-content {
+  gap: 20px;
+}
+
 .headline {
   padding-bottom: 60px;
+  max-width: 25ch;
 }
 
 .single-product-image {
   height: 100%;
   width: 100%;
+}
+
+.description-content {
+  margin-top: 20px;
+}
+
+label {
+  font-size: 12px;
+  color: #707070;
+}
+
+#add-to-cart-button .product-price {
+  float: right;
+}
+
+#add-to-cart-form {
+  margin-top: -20px;
+}
+
+.form-wrapper {
+  padding-top: 60px;
 }
 /*# sourceMappingURL=application.css.map */

@@ -1,0 +1,42 @@
+.grid {
+    display: grid;
+    gap: $gutter-global;
+}
+
+.two-columns {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.main-content {
+    min-height: 100vh;
+    padding: $gutter-global;
+    width: calc(50% + #{$gutter-global / 2});
+    margin-left: auto;
+}
+
+.valign-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.valign-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.sticky-side-image {
+    position: fixed;
+    left: 0;
+    top: $gutter-global;
+    bottom: $gutter-global;
+    width: calc(50% - #{$gutter-global / 2});
+}
+
+.sticky-side-image img {
+    width: 100%;
+    height: 100%;
+    // Fit the image within the parent
+    object-fit: cover;
+}

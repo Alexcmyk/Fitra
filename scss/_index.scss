@@ -1,0 +1,45 @@
+/* Index Styles */
+
+#product-info {
+    // pass two values and it stays between those values
+    grid-template-rows:
+        minmax(max-content, auto)
+        minmax(min-content, max-content);
+    // max-content for headline
+    // mix-content for other rows
+}
+
+#product-info-content {
+    gap: $gutter-global / 2;
+}
+
+.headline {
+    padding-bottom: $line-global * 3;
+    max-width: 25ch;
+}
+
+.single-product-image {
+    height: 100%;
+    width: 100%;
+}
+
+.description-content {
+    margin-top: $line-global;
+}
+
+label {
+    font-size: $label-font-size;
+    color: $color-label;
+}
+
+#add-to-cart-button .product-price {
+    float: right;
+}
+
+#add-to-cart-form {
+    margin-top: -($line-global);
+}
+
+.form-wrapper {
+    padding-top: $line-global * 3;
+}
