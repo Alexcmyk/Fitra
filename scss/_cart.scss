@@ -1,0 +1,55 @@
+#cart {
+  background-color: $color-empty-bg;
+  color: $white;
+}
+#cart-title {
+  position: relative;
+  color: $white;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-color: $white;
+  -webkit-text-stroke-width: 2px;
+  -moz-text-fill-color: transparent;
+  -moz-text-stroke-color: $white;
+  -moz-text-stroke-width: 2px;
+}
+#cart-title .cart-item-count {
+  -webkit-text-fill-color: initial;
+  -moz-text-fill-color: initial;
+  display: block;
+  font-size: 0.08em;
+  border: 2px solid $white;
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  position: absolute;
+  top: 1em;
+  right: 0;
+}
+
+#cart-empty-lines,
+#back-to-fitra {
+  grid-column: 2;
+}
+
+.empty-line {
+  border-top: $standard-border;
+  height: $line-global * 3;
+}
+
+.empty-line:last-child {
+  border-bottom: $standard-border;
+}
+
+.empty-line:first-child {
+  margin-top: $line-global;
+}
+
+#back-to-fitra {
+  margin-bottom: $line-global;
+}
+
+#back-to-fitra a {
+  color: $white;
+}
+
+// Cart Filled

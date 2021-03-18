@@ -36,7 +36,7 @@ ol {
 
 .headline-big {
   font-size: 22vw;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1;
 }
 
@@ -149,7 +149,14 @@ a {
   text-decoration: none;
 }
 
-.link-to-cart {
+.cart-item-count {
+  color: #ffffff;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.link-to-cart,
+.link-to-home {
   position: fixed;
   top: 0;
   right: 0;
@@ -169,7 +176,6 @@ a {
   width: 10px;
   height: 10px;
   background-color: #dedede;
-  border-radius: 50%;
 }
 
 .link-to-cart .cart-text {
@@ -189,7 +195,6 @@ a {
   height: 20px;
   background-color: #ff3700;
   font-size: 12px;
-  color: #ffffff;
   line-height: 20px;
   display: -ms-grid;
   display: grid;
@@ -212,6 +217,9 @@ a {
   padding: 40px;
   width: calc(50% + 20px);
   margin-left: auto;
+  -ms-grid-rows: minmax(max-content, auto) minmax(min-content, max-content);
+      grid-template-rows: minmax(-webkit-max-content, auto) minmax(-webkit-min-content, -webkit-max-content);
+      grid-template-rows: minmax(max-content, auto) minmax(min-content, max-content);
 }
 
 .valign-center {
@@ -256,12 +264,6 @@ a {
 }
 
 /* Index Styles */
-#product-info {
-  -ms-grid-rows: minmax(max-content, auto) minmax(min-content, max-content);
-      grid-template-rows: minmax(-webkit-max-content, auto) minmax(-webkit-min-content, -webkit-max-content);
-      grid-template-rows: minmax(max-content, auto) minmax(min-content, max-content);
-}
-
 #product-info-content {
   gap: 20px;
 }
@@ -295,5 +297,62 @@ label {
 
 .form-wrapper {
   padding-top: 60px;
+}
+
+#cart {
+  background-color: #bbbbbb;
+  color: #ffffff;
+}
+
+#cart-title {
+  position: relative;
+  color: #ffffff;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-color: #ffffff;
+  -webkit-text-stroke-width: 2px;
+  -moz-text-fill-color: transparent;
+  -moz-text-stroke-color: #ffffff;
+  -moz-text-stroke-width: 2px;
+}
+
+#cart-title .cart-item-count {
+  -webkit-text-fill-color: initial;
+  -moz-text-fill-color: initial;
+  display: block;
+  font-size: 0.08em;
+  border: 2px solid #ffffff;
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  position: absolute;
+  top: 1em;
+  right: 0;
+}
+
+#cart-empty-lines,
+#back-to-fitra {
+  -ms-grid-column: 2;
+  grid-column: 2;
+}
+
+.empty-line {
+  border-top: 1px solid #dedede;
+  height: 60px;
+}
+
+.empty-line:last-child {
+  border-bottom: 1px solid #dedede;
+}
+
+.empty-line:first-child {
+  margin-top: 20px;
+}
+
+#back-to-fitra {
+  margin-bottom: 20px;
+}
+
+#back-to-fitra a {
+  color: #ffffff;
 }
 /*# sourceMappingURL=application.css.map */
