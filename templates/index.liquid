@@ -5,7 +5,7 @@
     <div id="product-images" class="sticky-side-image">
         {% for image in mainProduct.images %}
         {% comment %} hide the other images if the forloop is not the first index | dont fully understand the data variant {% endcomment %}
-            <div class="single-product-image" {% if image.attached_to_variant? %}data-variant="{{ image.variants.first.id }}"{% endif %}>
+            <div class="single-product-image" {% if image.attached_to_variant? %}data-variant="{{ image.variants.first.id }}"{% endif %} style="{% if forloop.index > 1 %}display: none;{% endif %}">
                 <img src="{{ image | img_url: 'x1440' }}" />
             </div>
         {% endfor %}
