@@ -1,55 +1,150 @@
 #cart {
-  background-color: $color-empty-bg;
-  color: $white;
+    background-color: $color-empty-bg;
+    color: $white;
 }
 #cart-title {
-  position: relative;
-  color: $white;
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke-color: $white;
-  -webkit-text-stroke-width: 2px;
-  -moz-text-fill-color: transparent;
-  -moz-text-stroke-color: $white;
-  -moz-text-stroke-width: 2px;
+    position: relative;
+    color: $white;
 }
+
+#cart:not(.cart-filled) #cart-title {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-color: $white;
+    -webkit-text-stroke-width: 2px;
+    -moz-text-fill-color: transparent;
+    -moz-text-stroke-color: $white;
+    -moz-text-stroke-width: 2px;
+}
+
 #cart-title .cart-item-count {
-  -webkit-text-fill-color: initial;
-  -moz-text-fill-color: initial;
-  display: block;
-  font-size: 0.08em;
-  border: 2px solid $white;
-  width: 2em;
-  height: 2em;
-  line-height: 2em;
-  position: absolute;
-  top: 1em;
-  right: 0;
+    -webkit-text-fill-color: initial;
+    -moz-text-fill-color: initial;
+    display: block;
+    font-size: 0.08em;
+    border: 2px solid $white;
+    width: 2em;
+    height: 2em;
+    line-height: 2em;
+    position: absolute;
+    top: 1em;
+    right: 0;
 }
 
 #cart-empty-lines,
 #back-to-fitra {
-  grid-column: 2;
+    grid-column: 2;
 }
 
 .empty-line {
-  border-top: $standard-border;
-  height: $line-global * 3;
+    border-top: $standard-border;
+    height: $line-global * 3;
 }
 
 .empty-line:last-child {
-  border-bottom: $standard-border;
+    border-bottom: $standard-border;
 }
 
 .empty-line:first-child {
-  margin-top: $line-global;
+    margin-top: $line-global;
 }
 
 #back-to-fitra {
-  margin-bottom: $line-global;
+    margin-bottom: $line-global;
 }
 
 #back-to-fitra a {
-  color: $white;
+    color: $white;
 }
 
 // Cart Filled
+
+#cart.cart-filled {
+    background-color: $color-accent;
+}
+
+#cart.cart-filled .cart-item-count {
+    border: 0;
+    background-color: $black;
+}
+
+#cart.cart-filled #cart-content {
+    padding-bottom: $line-global * 8;
+    grid-template-rows: auto $line-global * 2;
+}
+
+#cart-content h2 {
+    color: $white;
+}
+
+table {
+    // gives all td cells the same width
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+
+th {
+    text-align: left;
+    font-weight: 300;
+    padding: $line-global 0;
+}
+
+tbody tr {
+    border-top: $standard-border;
+}
+
+td {
+    padding: $line-global 0;
+    position: relative;
+}
+
+td:last-child {
+    text-align: right;
+    vertical-align: top;
+}
+
+.remove-line {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    padding: $line-global $line-global/2;
+    display: block;
+    text-align: center;
+    width: $gutter-global;
+}
+.remove-text {
+    position: absolute;
+    color: $white;
+    top: 0;
+    right: 100%;
+    padding: $line-global 0 $line-global $line-global;
+    display: none;
+    color: $black;
+}
+
+.remove-line:hover .remove-text {
+    display: block;
+    background-color: $color-accent;
+}
+
+#cart-form-wrap {
+    grid-row: span 2;
+    position: relative;
+}
+
+#checkout-button {
+    position: absolute;
+    width: 100%;
+    bottom: -($line-global * 8);
+    left: 0;
+}
+
+#cart-support p,
+#cart-support a {
+    color: inherit;
+}
+
+#cart-totals {
+    border-bottom: $standard-border;
+}

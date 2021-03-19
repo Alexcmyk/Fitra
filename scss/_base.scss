@@ -1,20 +1,20 @@
 * {
-  font-family: $main-font;
-  box-sizing: border-box;
+    font-family: $main-font;
+    box-sizing: border-box;
 }
 
 html,
 body {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  color: $black;
-  line-height: $line-global;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    color: $black;
+    line-height: $line-global;
 }
 
 body {
-  background-color: $white;
-  font-size: $body-font-size;
+    background-color: $white;
+    font-size: $body-font-size;
 }
 
 h1,
@@ -26,152 +26,157 @@ h6,
 p,
 ul,
 ol {
-  margin: 0;
-  padding: 0;
-  font-family: 400;
-  color: $black;
+    margin: 0;
+    padding: 0;
+    font-family: 400;
+    color: $black;
 }
 
 // Universal Styles
 
 .headline-big {
-  font-size: 22vw;
-  font-weight: 400;
-  line-height: 1;
+    font-size: 22vw;
+    font-weight: 400;
+    line-height: 1;
 }
 
 h2 {
-  font-size: $body-font-size * 2;
-  line-height: $line-global * 2;
+    font-size: $body-font-size * 2;
+    line-height: $line-global * 2;
 }
 
 h3 {
-  font-size: $body-font-size;
-  line-height: $line-global;
-  font-weight: 400;
+    font-size: $body-font-size;
+    line-height: $line-global;
+    font-weight: 400;
 }
 
 p,
 ol,
 ul {
-  font-size: $body-font-size;
-  line-height: $line-global;
-  color: $color-text;
-  font-weight: 300;
+    font-size: $body-font-size;
+    line-height: $line-global;
+    color: $color-text;
+    font-weight: 300;
 }
 
 .list-with-stroke {
-  list-style-type: none;
+    list-style-type: none;
 }
 
 .list-with-stroke li {
-  padding: $line-global 0;
-  border-top: $standard-border;
+    padding: $line-global 0;
+    border-top: $standard-border;
 }
 
 .list-with-stroke li:last-child {
-  border-bottom: $standard-border;
+    border-bottom: $standard-border;
 }
 
 .styled-select {
-  position: relative;
+    position: relative;
 }
 
 .styled-select .select-arrow {
-  position: absolute;
-  top: 2px;
-  right: 2px;
-  bottom: 2px;
-  width: $line-global * 3;
-  background-color: $white;
-  text-align: center;
-  line-height: $line-global * 3;
-  border-left: $black-border;
-  pointer-events: none;
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    bottom: 2px;
+    width: $line-global * 3;
+    background-color: $white;
+    text-align: center;
+    line-height: $line-global * 3;
+    border-left: $black-border;
+    pointer-events: none;
 }
 
 .styled-select .select-arrow img {
-  display: inline-block;
-  vertical-align: middle;
-  width: 16px;
-  height: 16px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 16px;
+    height: 16px;
 }
 
 .styled-select select {
-  @include reset-input;
-  width: 100%;
-  font-size: $body-font-size;
-  line-height: $line-global;
-  padding: $line-global;
-  border: $black-border;
+    @include reset-input;
+    width: 100%;
+    font-size: $body-font-size;
+    line-height: $line-global;
+    padding: $line-global;
+    border: $black-border;
 }
 
 button {
-  @include reset-input;
-  width: 100%;
-  font-size: $body-font-size;
-  line-height: $line-global;
-  padding: $line-global;
-  background-color: $color-accent;
-  color: $white;
+    @include reset-input;
+    width: 100%;
+    font-size: $body-font-size;
+    line-height: $line-global;
+    padding: $line-global;
+    background-color: $black;
+    color: $white;
 }
 
 a {
-  color: $color-text;
-  text-decoration: none;
+    color: $color-text;
+    text-decoration: none;
 }
 
 .cart-item-count {
-  color: $white;
-  text-align: center;
-  border-radius: 50%;
+    color: $white;
+    text-align: center;
+    border-radius: 50%;
 }
 
 // Cart
 
 .link-to-cart,
 .link-to-home {
-  position: fixed;
-  top: 0;
-  right: 0;
-  padding: $gutter-global;
-  color: $color-text;
-  display: flex;
-  align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: $gutter-global;
+    color: $color-text;
+    display: flex;
+    align-items: center;
+}
+
+.link-to-home {
+    color: $black;
+    z-index: 100;
 }
 
 .link-to-cart .cart-item-count {
-  display: block;
-  font-size: 0;
-  width: 10px;
-  height: 10px;
-  background-color: $color-border;
+    display: block;
+    font-size: 0;
+    width: 10px;
+    height: 10px;
+    background-color: $color-border;
 }
 
 .link-to-cart .cart-text {
-  margin-right: 10px;
-  opacity: 0;
-  transition: opacity 400ms ease;
-  // controls what text does when it runs out of space
-  white-space: nowrap;
+    margin-right: 10px;
+    opacity: 0;
+    transition: opacity 400ms ease;
+    // controls what text does when it runs out of space
+    white-space: nowrap;
 }
 
 .link-to-cart:hover .cart-text {
-  opacity: 1;
+    opacity: 1;
 }
 
 // filled cart styles
 .link-to-cart.cart-filled .cart-item-count {
-  width: 20px;
-  height: 20px;
-  background-color: $color-accent;
-  font-size: $label-font-size;
-  line-height: $line-global;
-  display: grid;
-  place-items: center;
-  // Old icon centering
-  // text-align: center;
-  // margin-top: 0;
+    width: 20px;
+    height: 20px;
+    background-color: $color-accent;
+    font-size: $label-font-size;
+    line-height: $line-global;
+    display: grid;
+    place-items: center;
+    // Old icon centering
+    // text-align: center;
+    // margin-top: 0;
 }
 
 // Old cart

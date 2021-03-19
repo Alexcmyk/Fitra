@@ -9,6 +9,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
   {{ content_for_header }} <!-- Header hook for plugins -->
   {{ 'application.css' | asset_url | stylesheet_tag }}
+  <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
   {{ 'application.js' | asset_url | script_tag }}
 </head>
 <body class="template-{{ template }}">
@@ -34,8 +35,12 @@
     </a>
   {% endif %}
 
+
+{% if template != 'cart' and template != 'index' %}
+  {% include 'error-404' %}
+{% endif %}
   {% comment %} Main content gets filtered into here {% endcomment %}
-  <main role="main">
+  <main role="main" {% if template != 'cart' and template != 'index' %}style="display: none"{% endif %}>
     {{ content_for_layout }}
   </main>
 </body>
